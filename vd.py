@@ -1,4 +1,4 @@
-pip install torch torchvision opencv-python numpy flask
+
 import cv2
 import torch
 import numpy as np

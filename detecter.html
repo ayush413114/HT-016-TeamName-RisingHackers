@@ -3,7 +3,8 @@
 <head>
     <title>Video Authenticity Checker</title>
     <link rel="stylesheet" href="style.css">
-    <style>* {
+   
+   <style>* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -87,12 +88,13 @@ button:hover {
 }</style>
 </head>
 <body>
-   
-<video src="video3.mp4"></video>
-    <div class="container">
+    
+
+     <div class="container">
         <h1>Video Deepfake Detector</h1>
         
         <input type="file" accept="video/*" id="videoupload">
+        <video src="catvideo.mp4" > </video>
         
         <video id="preview" controls></video>
         
@@ -102,6 +104,10 @@ button:hover {
             Result: <span>Waiting for analysis...</span>
         </div>
     </div>
+   
+   <footer>
+    © 2026 HackTown Project | Deepfake & Identity Fraud Detection
+</footer>
 
-</body>
+    </body>
 </html>
