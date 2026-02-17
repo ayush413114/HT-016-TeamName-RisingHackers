@@ -1,9 +1,7 @@
-
-   
 <!DOCTYPE html>
 <html>
 <head>
-<title>Deepfake Video Detection | HackTown 2026</title>
+<title>Deepfake Detection Result | HackTown 2026</title>
 <style>
 * {
     margin: 0;
@@ -13,51 +11,60 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #1f4037, #99f2c8);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px 0;
+    color: white;
 }
 
 .container {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    flex-direction: column;
 }
 
 .card {
     background: white;
     padding: 40px;
-    width: 350px;
+    width: 400px;
     border-radius: 12px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     text-align: center;
+    color: #1f4037;
 }
 
 .card h2 {
     margin-bottom: 20px;
-    color: #1f4037;
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
+    padding: 12px 25px;
+    margin-top: 20px;
     border: none;
     border-radius: 6px;
     background: #1f4037;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -66,49 +73,34 @@ button:hover {
     background: #14532d;
 }
 
-.logout {
-    background: #c0392b;
-}
-
-.logout:hover {
-    background: #922b21;
-}
-
-.verify {
-    background: #2c3e50;
-}
-
-.verify:hover {
-    background: #1a252f;
-}
-
-.small-text {
-    margin-top: 15px;
-    font-size: 12px;
-    color: gray;
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+    color: white;
+    font-size: 14px;
 }
 </style>
 </head>
 <body>
 
 <header>
-    Deepfake Video Detection System
+    Deepfake Video Detection System | HackTown 2026
 </header>
 
 <div class="container">
     <div class="card">
-        <h2>Upload Video for Detection</h2>
-
-        <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="video" accept="video/*" required>
-            <br>
-            <button type="submit">Detect Deepfake</button>
-        </form>
-
+        <h2>Detection Result</h2>
         <div class="result">
-            {result}<br>
-            {confidence}
+            <p>{result}</p>
+            <p>{confidence}</p>
         </div>
+        <form action="/" method="get">
+            <button type="submit">Upload Another Video</button>
+        </form>
     </div>
 </div>
 
