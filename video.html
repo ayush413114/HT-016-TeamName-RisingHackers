@@ -1,9 +1,11 @@
+
+   
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard - Video KYC</title>
-    <link rel="stylesheet" href="style.css">
-    <style>* {
+<title>Deepfake Video Detection | HackTown 2026</title>
+<style>
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -84,26 +86,35 @@ button:hover {
     margin-top: 15px;
     font-size: 12px;
     color: gray;
-}</style>
+}
+</style>
 </head>
 <body>
 
+<header>
+    Deepfake Video Detection System | HackTown 2026 🚀
+</header>
+
 <div class="container">
     <div class="card">
-        <h2>Welcome to Video KYC Dashboard</h2>
-        <p>Select Option Below</p>
+        <h2>Upload Video for Detection</h2>
 
-        <a href="video.html">
-            <button>Start Video KYC</button>
-        </a>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*" required>
+            <br>
+            <button type="submit">Detect Deepfake</button>
+        </form>
 
-        <br><br>
-
-        <a href="index.html">
-            <button class="logout">Logout</button>
-        </a>
+        <div class="result">
+            {result}<br>
+            {confidence}
+        </div>
     </div>
 </div>
+
+<footer>
+    © 2026 HackTown Project | Deepfake & Identity Fraud Detection
+</footer>
 
 </body>
 </html>
