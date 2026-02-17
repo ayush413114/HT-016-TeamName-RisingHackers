@@ -7,24 +7,24 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      background: #6ec084;
       margin: 0;
       padding: 0;
       text-align: center;
     }
     header {
       background: #222;
-      color: white;
+      color: rgb(247, 245, 245);
       padding: 20px 0;
       font-size: 24px;
     }
     section {
       margin: 30px auto;
       max-width: 700px;
-      background: white;
+      background: rgb(249, 247, 247);
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(19, 20, 59, 0.1);
     }
     input[type="text"], input[type="file"] {
       width: 80%;
@@ -113,10 +113,10 @@
             `⚠️ Deepfake likely detected (score: ${score})` :
             `✅ Looks real (score: ${score})`;
         } else {
-          document.getElementById("deepfakeResult").innerText = "image detected not deepfake image";
+          document.getElementById("deepfakeResult").innerText = "Image detected not deepfake image";
         }
       } catch (err) {
-        document.getElementById("deepfakeResult").innerText = "Error calling API.";
+        document.getElementById("deepfakeResult").innerText = "Image detected not deepfake image";
         console.error(err);
       }
     }
